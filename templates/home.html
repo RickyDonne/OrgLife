@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Home
+{% endblock %}
+
+
+{% block head %}
+
+{% endblock %}
+
+
+{% block main %}
+<img class="mb-4" src="/static/icon.png" alt="" width="72" height="72">
+<div class="welcome-text">
+    <h1>
+        OrgLife
+    </h1>
+    <p>A beautifully simple free todo list and task list website.</p><br>
+    <h3>Features</h3>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Dark theme</li>
+      <li class="list-group-item">Tasks organised</li>
+      <li class="list-group-item">Add and Delete your tasks with a single click</li>
+    </ul><br>
+</div>
+<div class="btn-group">
+  <a href="/register" class="btn btn-dark">Register</a>
+  <a href="/login" class="btn btn-success">Sign in</a>
+</div>
+
+{% endblock %}

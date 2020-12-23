@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block main %}
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-moon fas fa-moon fa-2x" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z"/>
+    </svg>
+    <h4>Welcome, {{ name }}!</h4>
+    {% for ui in num %}
+        <h1>Tasks Remaining: {{ ui.NUM }}</h1>
+    {% endfor %}
+    <table class="table">
+        <tr>
+            <th>Task</th>
+            <th>Date added</th>
+            <th>Action</th>
+        </tr>
+        {% for c_task in table %}
+        <tr>
+            <td>{{c_task.task}}</td>
+            <td>{{c_task.date}}</td>
+            <td><a class="btn btn-primary" href="/delete/{{ c_task.id }}" role="button" >Delete</a></td>
+        </tr>
+        {% endfor %}
+
+        <form action="/add" method="post">
+            <tr>
+                <td>
+                    <div class="form-group">
+                    <input autocomplete="off" autofocus class="form-control" name="task" placeholder="Task" type="text">
+                    </div>
+                </td>
+                <td></td>
+                <td>
+                    <button class="btn btn-primary" type="submit">Add</button>
+                </td>
+            </tr>
+        </form>
+
+    </table>
+
+    <h4>
+        Today is
+        <span id="weekday">
+            Display day of the week.
+        </span>.</br>
+    </h4>
+{% endblock %}
