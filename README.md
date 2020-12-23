@@ -9,3 +9,6 @@ The passwords isn't stored in the database but is hashed so the accounts are com
 After registering, they can start adding their tasks. The first task they add will be at the top along with the date the task was added.
 
 The site also displays the current day. There is also an option for dark mode for the home page which stays on even after reloading the page until the option is clicked again.
+
+This is how it works:
+https://youtu.be/KQbm_2yUgqw
